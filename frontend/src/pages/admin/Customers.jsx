@@ -118,8 +118,9 @@ const Customers = () => {
       fetchCustomers();
     } catch (error) {
       if (error.response && error.response.data && typeof error.response.data.detail === 'string') {
-        setError(error.response.data.detail);
+        showToast(error.response.data.detail, 'error');
       } else if (error.response && error.response.data) {
+        showToast('Terjadi kesalahan saat menyimpan data', 'error');
         setFormErrors(error.response.data);
       } else {
         showToast('Terjadi kesalahan koneksi', 'error');

@@ -347,7 +347,7 @@ const AdminDashboard = () => {
                         <td className="py-3 px-4">{o.customerName}</td>
                         <td className="py-3 px-4">
                           <span className="px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 uppercase">
-                            {o.laundryStatus.replace('_', ' ')}
+                            {o.laundryStatus?.replace(/_/g, ' ')}
                           </span>
                         </td>
                         <td className="py-3 px-4 text-gray-400">{formatDate(o.entryDate)}</td>
