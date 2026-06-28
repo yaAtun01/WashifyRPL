@@ -1,0 +1,10 @@
+{
+  "name": "washify-root",
+  "version": "1.0.0",
+  "description": "Washify Admin Laundry Management System Workspace",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "cd backend && uvicorn app.main:app --reload",
+    "install:all": "npm --prefix frontend install && pip install -r backend/requirements.txt"
+  }
+}
